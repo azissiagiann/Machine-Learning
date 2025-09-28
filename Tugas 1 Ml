@@ -1,0 +1,136 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "q_UxKW2yyie-"
+      },
+      "outputs": [],
+      "source": [
+        "import pandas as pd"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import os"
+      ],
+      "metadata": {
+        "id": "gVYfYVG90ECh"
+      },
+      "execution_count": 8,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "folder_path = 'content/drive/My Drive'"
+      ],
+      "metadata": {
+        "id": "9as40ATb0ZC6"
+      },
+      "execution_count": 9,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e1In8ovs0cyQ",
+        "outputId": "ec6a40a7-bfce-4f7e-8fd0-0954ca7cff93"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mounted at /content/drive\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "file_path = '/content/drive/MyDrive/Tugas1MachineLearning/Data/day.csv'\n",
+        "df = pd.read_csv(file_path)"
+      ],
+      "metadata": {
+        "id": "3UpNF2uM2mB2"
+      },
+      "execution_count": 31,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df1 = df[['instant', 'dteday', 'season', 'temp', 'hum', 'windspeed']]"
+      ],
+      "metadata": {
+        "id": "YUkAVGxl33lv"
+      },
+      "execution_count": 34,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(df1.head())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QCuS0Cxc37QG",
+        "outputId": "7baca6ce-03d0-4d7a-d72c-41c7edce6522"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   instant      dteday  season      temp       hum  windspeed\n",
+            "0        1  2011-01-01       1  0.344167  0.805833   0.160446\n",
+            "1        2  2011-01-02       1  0.363478  0.696087   0.248539\n",
+            "2        3  2011-01-03       1  0.196364  0.437273   0.248309\n",
+            "3        4  2011-01-04       1  0.200000  0.590435   0.160296\n",
+            "4        5  2011-01-05       1  0.226957  0.436957   0.186900\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "nrV2O4W24Ysh"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
